@@ -78,8 +78,22 @@ export default function ChatSection() {
     }
   };
 
+  // 快捷问题列表
+  const quickQuestions = [
+    '简单介绍下你自己吧?',
+    '可以和我分享一下你的兴趣爱好吗?',
+    '你有特别崇拜的人吗?',
+    '可以和我分享一下你的个人愿景吗?',
+    '怎样联系你呢?',
+  ];
+
+  // 处理快捷问题点击
+  const handleQuickQuestion = (question: string) => {
+    setInputValue(question);
+  };
+
   return (
-    <section id="chat" className="py-16 md:py-24 px-4 md:px-6">
+    <section id="chat" className="py-16 md:py-24 px-4 md:px-6 bg-muted/30">
       <div className="container mx-auto max-w-4xl">
         <div className="flex items-center gap-3 mb-6 animate-fade-in">
           <MessageCircle className="w-6 h-6 md:w-7 md:h-7 text-primary" />
@@ -180,6 +194,24 @@ export default function ChatSection() {
 
             {/* 输入区域 */}
             <div className="border-t p-4">
+              {/* 快捷问题提示 */}
+              <div className="mb-3">
+                <p className="text-xs text-muted-foreground mb-2">快捷问题:</p>
+                <div className="flex flex-wrap gap-2">
+                  {quickQuestions.map((question, index) => (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleQuickQuestion(question)}
+                      className="text-xs h-7"
+                    >
+                      {question}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
               <div className="flex gap-2">
                 <Textarea
                   ref={textareaRef}

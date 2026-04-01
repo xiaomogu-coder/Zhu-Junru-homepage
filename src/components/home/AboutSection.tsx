@@ -11,7 +11,7 @@ export default function AboutSection() {
     <section id="about" className="py-16 md:py-24 px-4 md:px-6 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         {/* 教育背景 */}
-        <div id="education" className="mb-12 md:mb-16 animate-fade-in">
+        <div id="education" className="mb-12 animate-fade-in">
           <div className="flex items-center gap-3 mb-6">
             <GraduationCap className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             <h2 className="text-2xl md:text-3xl font-bold">教育背景</h2>
@@ -36,10 +36,10 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <Separator className="my-12 md:my-16" />
+        <Separator className="my-12" />
 
         {/* 实习经历 */}
-        <div id="experience" className="mb-12 md:mb-16 animate-fade-in">
+        <div id="experience" className="mb-12 animate-fade-in">
           <div className="flex items-center gap-3 mb-6">
             <Briefcase className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             <h2 className="text-2xl md:text-3xl font-bold">实习经历</h2>
@@ -68,10 +68,10 @@ export default function AboutSection() {
           </Card>
         </div>
 
-        <Separator className="my-12 md:my-16" />
+        <Separator className="my-12" />
 
         {/* 项目经历 */}
-        <div id="projects" className="mb-12 md:mb-16 animate-fade-in">
+        <div id="projects" className="mb-12 animate-fade-in">
           <div className="flex items-center gap-3 mb-6">
             <FolderKanban className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             <h2 className="text-2xl md:text-3xl font-bold">项目经历</h2>
@@ -141,7 +141,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <Separator className="my-12 md:my-16" />
+        <Separator className="my-12" />
 
         {/* 联系方式 */}
         <div id="contact" className="animate-fade-in">
